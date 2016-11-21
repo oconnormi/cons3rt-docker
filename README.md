@@ -11,9 +11,11 @@ Supported Properties:
 |:-----:|:--------:|:---------:|:-------------:|
 |`docker.socket.tcp.enabled.<role>`|`true`,`false`|`false`|Configure docker daemon to listen over tcp in addition to the default unix socket
 |`docker.socket.tcp.address.<role>`|any valid `tcp://<host>:<port>`|`tcp://0.0.0.0:2375`|Configure the host and port docker daemon listens on|
+|`docker.group.enabled.<role>`|`true`, `false`|`false`|Configure docker daemon to be accessible by the `docker` group (Warning! this is not secure. Make sure to use best practices for production environments)|
+|`docker.group.users.<role>`|any comma separated list of users|`cons3rt`|Users to add to the docker group|
 
 
 # Requirements:
  * Linux Kernel 3.10+
  * Yum
- * [Cons3rt Utils](https://milcloud.ceif.hpc.mil/ui/#/software/52340/overview)
+ * [Cons3rt Utils](https://github.com/oconnormi/cons3rt-utils)
